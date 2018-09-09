@@ -1,121 +1,187 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Shehab GitHub</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-        html{
+	<style>
+        html,body{
+            width: 100%;
             height: 100%;
-            background-image: url(https://wallpaper-house.com/data/out/12/wallpaper2you_483344.jpg);
+            overflow-x: hidden;
+            overflow-y: hidden;
+            background-color: black;
+            
         }
-        #content{
-            position: absolute;
-            /* height: 100%; */
-            width: 100%;
-        }
-        #footer {
-            bottom: 0;
-            width: 100%;
+        
+        .centering{
             position: fixed;
-            color: white
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            cursor:pointer;
             }
-    </style>
+        .mypadding{
+            margin-top:50%;
+            margin-bottom: 50%; 
+        }
+        section{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top:0;
+            
+        }
+        #menuSection{
+            background-color: white;
+            color:black;
+            font-size: 3em;
+        }
+        nav{
+            width: 100%;
+            text-align: center;
+        }
+        nav div{
+            padding: 2% 0px;
+        }
+        nav div:hover{
+            background-color: black;
+            color:white;
+        }
+        .mydisplay{
+            display: none;
+        }
+        .info{
+            top: 20%;
+            font-size: 70px
+        }
+        #infoLong{
+            color:white;
+        }
+        #infoShort{
+            color:red;
+            display: none
+        }
+        a{
+            text-decoration: transparent;
+            color:inherit;    
+        }
+        a:hover{
+            text-decoration: transparent;
+            color:inherit;    
+        }
+        .path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 4s linear forwards;
+  animation-delay: 4000ms;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+} 
+        /* .fadingIn{
+            display: block;
+            animation-name: fadingInAnimation;
+            animation-duration: 2s;
+
+        }
+        .fadingOut{
+            animation-name: fadingOutAnimation;
+            animation-duration: 2s;
+            display: none;
+        }
+        /* The animation code 
+        @keyframes fadingInAnimation {
+            0%   {opacity:0;}
+            100% {opacity: 1;}
+        }
+        @keyframes fadingOutAnimation {
+            0%   {opacity: 0;}
+            100% {opacity:1;}
+        } */
+	</style>    
 </head>
+
 <body>
-    <!-- <header id="header" class="text-center">
-        <h1 class="alert alert-danger m-0">Welcome To My GitHub</h1>
-    </header> -->
-    
-    <section id="content" class="row">
-        <nav class="col-sm-3">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Projects</a>
-                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact</a>
-            </div>
-        </nav>
-        <div class="col-sm-9">
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-            </div>
-        </div>
+    <section id="buttonSection">
+        <div  class="centering info"><span id="infoLong"></span><span id="infoShort">web developer</span></div>
+        <svg  id="buttonsSVG" class="centering" height="200" width="200" >
+            <!-- <circle cx="100" cy="100" r="0" stroke="white" stroke-width="3" fill="transparent" onclick="toMenu()">
+                <animate id="circle" attributeType="XML" attributeName="r" from="0" to="60" dur="1s" repeatCount="0" fill="freeze" begin="5s"/>
+            </circle> -->
+            <path class="path" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" d="
+                 M 100, 100
+                 m 75, 0
+                 a 60,60 0 1,0 -150,0
+                 a 60,60 0 1,0 150,0
+                 
+                 "/>
+            
+                <rect width="0" height="4" x="80" y="86" rx="2" ry="2" style="fill:rgb(255,255,255);">
+                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="2s" repeatCount="0" begin="4s" fill="freeze" />
+                </rect>
+                <rect width="0" height="4" x="80" y="100" rx="2" ry="2" style="fill:rgb(255,255,255);">
+                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="2s" repeatCount="0" begin="4s" fill="freeze" />
+                </rect>
+                <rect width="0" height="4" x="80" y="114" rx="2" ry="2" style="fill:rgb(255, 255, 255);">
+                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="2s" repeatCount="0" begin="4s" fill="freeze" />
+                </rect>
+            
+        </svg>
     </section>
+    <section id="menuSection" class="mydisplay">
+            <div style=" position:fixed;top:10%;right: 10%;cursor:pointer;" onclick="toButtons()" id="close">x</div>
+        <nav class="centering">
+            <div>Projects</div>
+            <div><a href="Resume.pdf">Resume</a></div>
+            <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSdlsImbj3Kq58aO1F2AvbIyA28zlF5Wkga4_VpgWaV3EU6CoQ/viewform?usp=sf_link">Contact</a></div>
+        </nav>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- <section id="googleForm" class="text-center mt-5"> 
-         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlsImbj3Kq58aO1F2AvbIyA28zlF5Wkga4_VpgWaV3EU6CoQ/viewform?usp=sf_link">Contact Me</a> -->
-        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlsImbj3Kq58aO1F2AvbIyA28zlF5Wkga4_VpgWaV3EU6CoQ/viewform?embedded=true" width="640" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
-    <!-- </section> -->
-    <footer id="footer" class="footer text-center">
-        <p class="alert m-0">CopyRight &copy; 2018 Shehab Emad</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        // var buttons = document.getElementById("buttonSection");
+        // var menu = document.getElementById("menuSection");
+        // function toMenu(){
+        //     buttons.classList.add("fadingOut");
+        //     menu.classList.add("fadingIn");
+        // }
+        // function toButtons(){
+        //     buttons.classList.remove("fadingOut");
+        //     menu.classList.remove("fadingIn");
+        //     buttons.classList.add("fadingIn");
+        //     menu.classList.add("fadingOut");
+        //     document.getElementById("circle").beginElement();
+        // }
+        $( "#buttonsSVG" ).click(function() {
+            $("#buttonSection").fadeOut();
+            $("#menuSection").fadeIn();
+        });
+        $( "#close" ).click(function() {
+            $("#buttonSection").fadeIn();
+            $("#menuSection").fadeOut();    
+            // document.getElementById("circle").beginElement();
+        });
+        var i = 0;
+var txt = "My Name is Shehab Emad, and I am a ";
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("infoLong").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }else{
+      $("#infoShort").fadeIn();
+      }
+}
+typeWriter();
+    </script>
 </body>
+
 </html>
-
-
-
-
-<style>
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <section id="portfolio" class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <article id="article1" class="mt-5">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="p.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">My Portfolio</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="http://shehabemad.000webhostapp.com" class="btn btn-link">My Website</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-sm-4">
-                    <article id="article2" class="mt-5">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Fast Info</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="http://fastinfo.000webhostapp.com" class="btn btn-link">My Blog</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-sm-4">
-                    <article id="article3" class="mt-5">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Behance</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="https://behance.net/shehabemad5e16" class="btn btn-link">My Behance</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>    
-    </section> -->
