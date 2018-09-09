@@ -83,27 +83,7 @@
   to {
     stroke-dashoffset: 0;
   }
-} 
-        /* .fadingIn{
-            display: block;
-            animation-name: fadingInAnimation;
-            animation-duration: 2s;
-
-        }
-        .fadingOut{
-            animation-name: fadingOutAnimation;
-            animation-duration: 2s;
-            display: none;
-        }
-        /* The animation code 
-        @keyframes fadingInAnimation {
-            0%   {opacity:0;}
-            100% {opacity: 1;}
-        }
-        @keyframes fadingOutAnimation {
-            0%   {opacity: 0;}
-            100% {opacity:1;}
-        } */
+}
 	</style>    
 </head>
 
@@ -111,9 +91,6 @@
     <section id="buttonSection">
         <div  class="centering info"><span id="infoLong"></span><span id="infoShort">web developer</span></div>
         <svg  id="buttonsSVG" class="centering" height="200" width="200" >
-            <!-- <circle cx="100" cy="100" r="0" stroke="white" stroke-width="3" fill="transparent" onclick="toMenu()">
-                <animate id="circle" attributeType="XML" attributeName="r" from="0" to="60" dur="1s" repeatCount="0" fill="freeze" begin="5s"/>
-            </circle> -->
             <path class="path" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" d="
                  M 100, 100
                  m 75, 0
@@ -123,13 +100,13 @@
                  "/>
             
                 <rect width="0" height="4" x="80" y="86" rx="2" ry="2" style="fill:rgb(255,255,255);">
-                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="2s" repeatCount="0" begin="4s" fill="freeze" />
+                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="1.8s" repeatCount="0" begin="4s" fill="freeze" />
                 </rect>
                 <rect width="0" height="4" x="80" y="100" rx="2" ry="2" style="fill:rgb(255,255,255);">
-                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="2s" repeatCount="0" begin="4s" fill="freeze" />
+                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="1.8s" repeatCount="0" begin="4s" fill="freeze" />
                 </rect>
                 <rect width="0" height="4" x="80" y="114" rx="2" ry="2" style="fill:rgb(255, 255, 255);">
-                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="2s" repeatCount="0" begin="4s" fill="freeze" />
+                    <animate attributeType="XML" attributeName="width" from="0" to="40" dur="1.8s" repeatCount="0" begin="4s" fill="freeze" />
                 </rect>
             
         </svg>
@@ -145,27 +122,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script>
-        // var buttons = document.getElementById("buttonSection");
-        // var menu = document.getElementById("menuSection");
-        // function toMenu(){
-        //     buttons.classList.add("fadingOut");
-        //     menu.classList.add("fadingIn");
-        // }
-        // function toButtons(){
-        //     buttons.classList.remove("fadingOut");
-        //     menu.classList.remove("fadingIn");
-        //     buttons.classList.add("fadingIn");
-        //     menu.classList.add("fadingOut");
-        //     document.getElementById("circle").beginElement();
-        // }
         $( "#buttonsSVG" ).click(function() {
             $("#buttonSection").fadeOut();
             $("#menuSection").fadeIn();
         });
         $( "#close" ).click(function() {
             $("#buttonSection").fadeIn();
-            $("#menuSection").fadeOut();    
-            // document.getElementById("circle").beginElement();
+            $("#menuSection").fadeOut();
+            $("path").removeClass("path");
         });
         var i = 0;
 var txt = "My Name is Shehab Emad, and I am a ";
