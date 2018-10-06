@@ -4,7 +4,7 @@
   "description": "Shehab Emad portfolio",
   "background_color": "#fff",
   "theme_color": "#fff",
-  "start_url": "https://shehab-emad.github.io/",
+  "start_url": "https://shehab-emad.github.io/offline.html",
   "display": "fullscreen",
   "orientation": "portrait",
   "icons": [
